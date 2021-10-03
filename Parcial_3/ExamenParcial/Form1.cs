@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using System.IO;
+using Microsoft.Office.Interop.Excel;
 
 namespace ExamenParcial
 {
@@ -17,6 +18,7 @@ namespace ExamenParcial
         public FMRLavadero()
         {
             InitializeComponent();
+
         }
         public int pregunta = 0;
         private void CBEncargado_SelectedIndexChanged(object sender, EventArgs e)
@@ -34,16 +36,16 @@ namespace ExamenParcial
         {
             if(CBEncargado.Text != "")
             {
-                object add = CBEncargado.Text;
-                CBEncargado.Items.Add(add);
+                object agregar = CBEncargado.Text;
+                CBEncargado.Items.Add(agregar);
                 CBEncargado.ResetText();
             }
         }
 
         private void BTNRemEncargado_Click(object sender, EventArgs e)
         {
-            object add = CBEncargado.Text;
-            CBEncargado.Items.Remove(add);
+            object remover = CBEncargado.Text;
+            CBEncargado.Items.Remove(remover);
             CBEncargado.ResetText();
             TBPlaca.Enabled = false;
             TBVeh.Enabled = false;
@@ -252,26 +254,17 @@ namespace ExamenParcial
             }
         }
 
-        private void BTNCargar_Click(object sender, EventArgs e)
-        {
-            DialogResult consulta = MessageBox.Show("¿Desea cargar un archivo?", "STOP", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
-            if (consulta == DialogResult.Yes)
-            {
-                
-            }
-        }
-
         private void BTNCerrar_Click(object sender, EventArgs e)
         {
             DialogResult consulta = MessageBox.Show("¿Está seguro de querer cerrar la APP?", "STOP", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
             if (consulta == DialogResult.Yes)
             {
-                 bool salir = true;
-                 try
-                 {
-                     GuardarDatos();
-                 }
-                 catch
+                bool salir = true;
+                 //try
+                 //{
+                     GuardarDatos(DTGVDatos);
+                 //}
+                 /*catch
                  {
                      salir = false;
                      DialogResult salida = MessageBox.Show("Los datos NO fueron guardados ¿Seguro que desea CERRAR?", "WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -284,24 +277,22 @@ namespace ExamenParcial
                  {
                      MessageBox.Show("Los datos se han guardado exitosamente", "MENSAJE");
                      this.Close();
-                 }
-                this.Close();
+                 }*/
             }
         }
-
-        private void FMRLavadero_Load(object sender, EventArgs e)
+        private void GuardarDatos(DataGridView tabla)
         {
-
-        }
-        private void GuardarDatos()
-        {
-            string ruta = AppDomain.CurrentDomain.BaseDirectory + "/datoss.txt";
-            using (var WriteText = new StreamWriter(ruta))
+            string ruta = "C:\\Users\\Usuario\\Desktop\\datos.txt";
+            string lineas = "";
+            StreamWriter WriteLinea = new StreamWriter(ruta);              
+            foreach(DataGridViewRow row in tabla.Rows)
             {
-                foreach (DataGridViewRow row in DTGVDatos.Rows)
+                for (int celda = 0; celda < tabla.Columns.Count; celda++)
                 {
-                    WriteText.WriteLine($"{row.Cells[0].Value},{row.Cells[1].Value},{row.Cells[2].Value},{row.Cells[3].Value},{row.Cells[4].Value},{row.Cells[5].Value},{row.Cells[6].Value}");
+                    lineas += Convert.ToString(row.Cells[celda].Value) + ";";
                 }
+                WriteLinea.WriteLine(lineas);
+                lineas = "";
             }
         }
     }

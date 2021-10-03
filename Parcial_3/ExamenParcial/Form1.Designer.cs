@@ -47,7 +47,6 @@ namespace ExamenParcial
             this.TBVeh = new System.Windows.Forms.TextBox();
             this.TBTipo = new System.Windows.Forms.TextBox();
             this.BTNCerrar = new System.Windows.Forms.Button();
-            this.BTNCargar = new System.Windows.Forms.Button();
             this.TBServicio = new System.Windows.Forms.TextBox();
             this.TBPrecio = new System.Windows.Forms.TextBox();
             this.LBPlaca = new System.Windows.Forms.Label();
@@ -80,7 +79,7 @@ namespace ExamenParcial
             this.DTGVDatos.Location = new System.Drawing.Point(23, 198);
             this.DTGVDatos.Name = "DTGVDatos";
             this.DTGVDatos.Size = new System.Drawing.Size(628, 176);
-            this.DTGVDatos.TabIndex = 0;
+            this.DTGVDatos.TabIndex = 14;
             // 
             // Codigo_Cliente
             // 
@@ -126,7 +125,7 @@ namespace ExamenParcial
             this.BTNGuardar.Location = new System.Drawing.Point(506, 32);
             this.BTNGuardar.Name = "BTNGuardar";
             this.BTNGuardar.Size = new System.Drawing.Size(75, 23);
-            this.BTNGuardar.TabIndex = 1;
+            this.BTNGuardar.TabIndex = 10;
             this.BTNGuardar.Text = "Guardar";
             this.BTNGuardar.UseVisualStyleBackColor = true;
             this.BTNGuardar.Click += new System.EventHandler(this.BTNGuardar_Click);
@@ -137,7 +136,7 @@ namespace ExamenParcial
             this.BTNActualizar.Location = new System.Drawing.Point(506, 112);
             this.BTNActualizar.Name = "BTNActualizar";
             this.BTNActualizar.Size = new System.Drawing.Size(75, 23);
-            this.BTNActualizar.TabIndex = 2;
+            this.BTNActualizar.TabIndex = 12;
             this.BTNActualizar.Text = "Actualizar";
             this.BTNActualizar.UseVisualStyleBackColor = true;
             this.BTNActualizar.Click += new System.EventHandler(this.BTNActualizar_Click);
@@ -148,7 +147,7 @@ namespace ExamenParcial
             this.BTNLimpiar.Location = new System.Drawing.Point(292, 153);
             this.BTNLimpiar.Name = "BTNLimpiar";
             this.BTNLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.BTNLimpiar.TabIndex = 3;
+            this.BTNLimpiar.TabIndex = 8;
             this.BTNLimpiar.Text = "Limpiar";
             this.BTNLimpiar.UseVisualStyleBackColor = true;
             this.BTNLimpiar.Click += new System.EventHandler(this.BTNLimpiar_Click);
@@ -159,7 +158,7 @@ namespace ExamenParcial
             this.CBEncargado.Location = new System.Drawing.Point(61, 21);
             this.CBEncargado.Name = "CBEncargado";
             this.CBEncargado.Size = new System.Drawing.Size(121, 21);
-            this.CBEncargado.TabIndex = 5;
+            this.CBEncargado.TabIndex = 0;
             this.CBEncargado.SelectedIndexChanged += new System.EventHandler(this.CBEncargado_SelectedIndexChanged);
             // 
             // BTNAddEncargado
@@ -167,7 +166,7 @@ namespace ExamenParcial
             this.BTNAddEncargado.Location = new System.Drawing.Point(211, 10);
             this.BTNAddEncargado.Name = "BTNAddEncargado";
             this.BTNAddEncargado.Size = new System.Drawing.Size(75, 34);
-            this.BTNAddEncargado.TabIndex = 6;
+            this.BTNAddEncargado.TabIndex = 1;
             this.BTNAddEncargado.Text = "Agregar Encargado";
             this.BTNAddEncargado.UseVisualStyleBackColor = true;
             this.BTNAddEncargado.Click += new System.EventHandler(this.BTNAddEncargado_Click);
@@ -177,7 +176,7 @@ namespace ExamenParcial
             this.BTNRemEncargado.Location = new System.Drawing.Point(292, 10);
             this.BTNRemEncargado.Name = "BTNRemEncargado";
             this.BTNRemEncargado.Size = new System.Drawing.Size(75, 34);
-            this.BTNRemEncargado.TabIndex = 7;
+            this.BTNRemEncargado.TabIndex = 2;
             this.BTNRemEncargado.Text = "Eliminar Encargado";
             this.BTNRemEncargado.UseVisualStyleBackColor = true;
             this.BTNRemEncargado.Click += new System.EventHandler(this.BTNRemEncargado_Click);
@@ -188,7 +187,7 @@ namespace ExamenParcial
             this.TBPlaca.Location = new System.Drawing.Point(135, 56);
             this.TBPlaca.Name = "TBPlaca";
             this.TBPlaca.Size = new System.Drawing.Size(100, 20);
-            this.TBPlaca.TabIndex = 8;
+            this.TBPlaca.TabIndex = 3;
             // 
             // TBVeh
             // 
@@ -196,7 +195,7 @@ namespace ExamenParcial
             this.TBVeh.Location = new System.Drawing.Point(135, 82);
             this.TBVeh.Name = "TBVeh";
             this.TBVeh.Size = new System.Drawing.Size(100, 20);
-            this.TBVeh.TabIndex = 9;
+            this.TBVeh.TabIndex = 4;
             // 
             // TBTipo
             // 
@@ -204,27 +203,17 @@ namespace ExamenParcial
             this.TBTipo.Location = new System.Drawing.Point(135, 108);
             this.TBTipo.Name = "TBTipo";
             this.TBTipo.Size = new System.Drawing.Size(100, 20);
-            this.TBTipo.TabIndex = 10;
+            this.TBTipo.TabIndex = 5;
             // 
             // BTNCerrar
             // 
             this.BTNCerrar.Location = new System.Drawing.Point(560, 390);
             this.BTNCerrar.Name = "BTNCerrar";
             this.BTNCerrar.Size = new System.Drawing.Size(75, 23);
-            this.BTNCerrar.TabIndex = 11;
+            this.BTNCerrar.TabIndex = 15;
             this.BTNCerrar.Text = "Cerrar";
             this.BTNCerrar.UseVisualStyleBackColor = true;
             this.BTNCerrar.Click += new System.EventHandler(this.BTNCerrar_Click);
-            // 
-            // BTNCargar
-            // 
-            this.BTNCargar.Location = new System.Drawing.Point(456, 386);
-            this.BTNCargar.Name = "BTNCargar";
-            this.BTNCargar.Size = new System.Drawing.Size(86, 30);
-            this.BTNCargar.TabIndex = 12;
-            this.BTNCargar.Text = "Cargar Archivo";
-            this.BTNCargar.UseVisualStyleBackColor = true;
-            this.BTNCargar.Click += new System.EventHandler(this.BTNCargar_Click);
             // 
             // TBServicio
             // 
@@ -232,7 +221,7 @@ namespace ExamenParcial
             this.TBServicio.Location = new System.Drawing.Point(135, 134);
             this.TBServicio.Name = "TBServicio";
             this.TBServicio.Size = new System.Drawing.Size(100, 20);
-            this.TBServicio.TabIndex = 13;
+            this.TBServicio.TabIndex = 6;
             // 
             // TBPrecio
             // 
@@ -240,7 +229,7 @@ namespace ExamenParcial
             this.TBPrecio.Location = new System.Drawing.Point(135, 160);
             this.TBPrecio.Name = "TBPrecio";
             this.TBPrecio.Size = new System.Drawing.Size(100, 20);
-            this.TBPrecio.TabIndex = 14;
+            this.TBPrecio.TabIndex = 7;
             // 
             // LBPlaca
             // 
@@ -338,7 +327,7 @@ namespace ExamenParcial
             this.BTNBorrar.Location = new System.Drawing.Point(506, 153);
             this.BTNBorrar.Name = "BTNBorrar";
             this.BTNBorrar.Size = new System.Drawing.Size(75, 23);
-            this.BTNBorrar.TabIndex = 25;
+            this.BTNBorrar.TabIndex = 13;
             this.BTNBorrar.Text = "Borrar";
             this.BTNBorrar.UseVisualStyleBackColor = true;
             this.BTNBorrar.Click += new System.EventHandler(this.BTNBorrar_Click);
@@ -349,7 +338,7 @@ namespace ExamenParcial
             this.BTNEditar.Location = new System.Drawing.Point(506, 72);
             this.BTNEditar.Name = "BTNEditar";
             this.BTNEditar.Size = new System.Drawing.Size(75, 23);
-            this.BTNEditar.TabIndex = 26;
+            this.BTNEditar.TabIndex = 11;
             this.BTNEditar.Text = "Editar";
             this.BTNEditar.UseVisualStyleBackColor = true;
             this.BTNEditar.Click += new System.EventHandler(this.BTNEditar_Click);
@@ -360,7 +349,7 @@ namespace ExamenParcial
             this.BTNSalir.Location = new System.Drawing.Point(391, 153);
             this.BTNSalir.Name = "BTNSalir";
             this.BTNSalir.Size = new System.Drawing.Size(75, 23);
-            this.BTNSalir.TabIndex = 27;
+            this.BTNSalir.TabIndex = 9;
             this.BTNSalir.Text = "Salir";
             this.BTNSalir.UseVisualStyleBackColor = true;
             this.BTNSalir.Click += new System.EventHandler(this.BTNSalir_Click);
@@ -370,6 +359,7 @@ namespace ExamenParcial
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 425);
+            this.ControlBox = false;
             this.Controls.Add(this.BTNSalir);
             this.Controls.Add(this.BTNEditar);
             this.Controls.Add(this.BTNBorrar);
@@ -385,7 +375,6 @@ namespace ExamenParcial
             this.Controls.Add(this.LBPlaca);
             this.Controls.Add(this.TBPrecio);
             this.Controls.Add(this.TBServicio);
-            this.Controls.Add(this.BTNCargar);
             this.Controls.Add(this.BTNCerrar);
             this.Controls.Add(this.TBTipo);
             this.Controls.Add(this.TBVeh);
@@ -397,9 +386,10 @@ namespace ExamenParcial
             this.Controls.Add(this.BTNActualizar);
             this.Controls.Add(this.BTNGuardar);
             this.Controls.Add(this.DTGVDatos);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FMRLavadero";
             this.Text = "Lavadero";
-            this.Load += new System.EventHandler(this.FMRLavadero_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DTGVDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -419,7 +409,6 @@ namespace ExamenParcial
         private System.Windows.Forms.TextBox TBVeh;
         private System.Windows.Forms.TextBox TBTipo;
         private System.Windows.Forms.Button BTNCerrar;
-        private System.Windows.Forms.Button BTNCargar;
         private System.Windows.Forms.TextBox TBServicio;
         private System.Windows.Forms.TextBox TBPrecio;
         private System.Windows.Forms.Label LBPlaca;
